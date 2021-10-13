@@ -19,7 +19,7 @@ const htmlEntities = {
 	apos: '\''
 };
 
-function unescapeHTML(str) {
+export function unescapeHTML(str) {
 	return str.replace(/&([^;]+);/g, (entity, entityCode) => {
 		let match;
 		if (entityCode in htmlEntities) {
@@ -117,7 +117,7 @@ export function parse(source) {
 
 		let attribute;
 		while (i < source.length && (attribute = getAttribute())) {
-			element.properties[attribute.name] = attribute.value;
+			element.properties[attribute.name] = unescapeHTML(attribute.value);
 		}
 
 		let selfClosing = false;
