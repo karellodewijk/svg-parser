@@ -309,5 +309,5 @@ function parse(source) {
 	};
 }
 
-export { parse };
+export { parse, unescapeHTML };
 //# sourceMappingURL=svg-parser.esm.js.map

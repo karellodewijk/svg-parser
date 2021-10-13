@@ -316,6 +316,7 @@
     }
 
     exports.parse = parse;
+    exports.unescapeHTML = unescapeHTML;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
