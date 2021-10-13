@@ -117,7 +117,7 @@ export function parse(source) {
 
 		let attribute;
 		while (i < source.length && (attribute = getAttribute())) {
-			element.properties[attribute.name] = unescapeHTML(attribute.value);
+			element.properties[attribute.name] = attribute.value;
 		}
 
 		let selfClosing = false;
