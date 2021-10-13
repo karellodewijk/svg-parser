@@ -14,6 +14,7 @@
     "build": "rm -rf dist && rollup -c",
     "pretest": "npm run build",
     "prepublish": "npm run lint && npm test",
+    "prepare": "npm run lint && npm test && npm run build",
     "lint": "eslint src"
   },
   "prettier": {
